@@ -21,4 +21,5 @@ def compute_loss(y, tx, w):
     # INSERT YOUR CODE HERE
     # TODO: compute loss by MSE
     # ***************************************************
-    raise NotImplementedError
+    error = y - tx.dot(w)
+    return 1/2*np.mean(error**2)
